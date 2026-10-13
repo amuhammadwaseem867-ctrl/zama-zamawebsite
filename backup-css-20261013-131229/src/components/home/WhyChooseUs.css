@@ -1,0 +1,390 @@
+﻿.why-section {
+  padding: 105px 0 100px;
+  overflow: hidden;
+  background: #f8f8f6;
+  color: #111214;
+}
+
+.why-container {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 0 7%;
+}
+
+.why-main {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.why-copy {
+  max-width: 650px;
+}
+
+.why-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 22px;
+  color: #65666a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.why-eyebrow > span {
+  width: 30px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #e5232e;
+}
+
+.why-heading {
+  margin: 0;
+  font-size: clamp(37px, 4.5vw, 62px);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -2px;
+}
+
+.why-heading > span {
+  color: #e5232e;
+}
+
+.why-description {
+  max-width: 490px;
+  margin: 24px 0 0;
+  color: #65666a;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.why-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 29px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5232e;
+  color: #111214;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  transition: color 0.2s ease;
+}
+
+.why-link svg {
+  color: #e5232e;
+  transition: transform 0.2s ease;
+}
+
+.why-link:hover {
+  color: #e5232e;
+}
+
+.why-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* Brand visual panel */
+.why-visual {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  background: #181a1d;
+  color: #f8f8f6;
+}
+
+.why-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(229, 35, 46, 0.17),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.025) 40%,
+      rgba(255, 255, 255, 0.025) 41%,
+      transparent 41%
+    );
+  pointer-events: none;
+}
+
+.why-visual-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #e5232e;
+}
+
+.why-visual-content {
+  position: relative;
+  min-height: 390px;
+  padding: 34px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.why-visual-label {
+  color: #a4a5a8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.why-visual-mark {
+  margin-top: 34px;
+  color: #f8f8f6;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -5px;
+}
+
+.why-visual-mark span {
+  color: #e5232e;
+}
+
+.why-visual-content > p {
+  margin: 23px 0 30px;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 900;
+  line-height: 1.13;
+  letter-spacing: -0.8px;
+}
+
+.why-visual-content > p span {
+  color: #e5232e;
+}
+
+.why-visual-bottom {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #a4a5a8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.why-visual-line {
+  width: 48px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #e5232e;
+}
+
+/* Feature cards */
+.why-features {
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #dededc;
+  border-left: 1px solid #dededc;
+}
+
+.why-feature {
+  min-width: 0;
+  min-height: 210px;
+  padding: 25px 23px 24px;
+  border-right: 1px solid #dededc;
+  border-bottom: 1px solid #dededc;
+  background: #f8f8f6;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.why-feature:hover {
+  background: #111214;
+  color: #f8f8f6;
+}
+
+.why-feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 29px;
+}
+
+.why-feature-number {
+  color: #999a9c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.why-feature-top svg {
+  flex-shrink: 0;
+  color: #e5232e;
+}
+
+.why-feature h3 {
+  margin: 0 0 11px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.why-feature p {
+  margin: 0;
+  color: #6d6e71;
+  font-size: 12px;
+  line-height: 1.85;
+  transition: color 0.2s ease;
+}
+
+.why-feature:hover p {
+  color: #b5b5b8;
+}
+
+/* Laptops and tablets */
+@media (max-width: 1050px) {
+  .why-container {
+    padding: 0 5%;
+  }
+
+  .why-main {
+    gap: 40px;
+  }
+
+  .why-visual,
+  .why-visual-content {
+    min-height: 360px;
+  }
+
+  .why-visual-content {
+    padding: 30px 27px;
+  }
+
+  .why-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 60px;
+  }
+}
+
+/* Mobile and smaller tablets */
+@media (max-width: 640px) {
+  .why-section {
+    padding: 75px 0 70px;
+  }
+
+  .why-container {
+    padding: 0 6%;
+  }
+
+  .why-main {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .why-eyebrow {
+    margin-bottom: 18px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .why-heading {
+    font-size: clamp(35px, 9vw, 49px);
+    letter-spacing: -1.4px;
+  }
+
+  .why-description {
+    margin-top: 19px;
+    font-size: 13px;
+  }
+
+  .why-link {
+    margin-top: 23px;
+  }
+
+  .why-visual,
+  .why-visual-content {
+    min-height: 335px;
+  }
+
+  .why-visual-content {
+    padding: 28px 26px;
+  }
+
+  .why-visual-mark {
+    margin-top: 27px;
+    font-size: 57px;
+  }
+
+  .why-visual-content > p {
+    font-size: 30px;
+  }
+
+  .why-features {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+
+  .why-feature {
+    min-height: auto;
+    padding: 23px 21px;
+  }
+
+  .why-feature-top {
+    margin-bottom: 20px;
+  }
+
+  .why-feature h3 {
+    font-size: 17px;
+  }
+
+  .why-feature p {
+    font-size: 13px;
+  }
+}
+
+/* Narrow phones */
+@media (max-width: 380px) {
+  .why-container {
+    padding: 0 5%;
+  }
+
+  .why-heading {
+    font-size: 33px;
+  }
+
+  .why-visual,
+  .why-visual-content {
+    min-height: 310px;
+  }
+
+  .why-visual-content {
+    padding: 25px 22px;
+  }
+
+  .why-visual-content > p {
+    font-size: 27px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .why-link,
+  .why-link svg,
+  .why-feature,
+  .why-feature p {
+    transition: none;
+  }
+}
