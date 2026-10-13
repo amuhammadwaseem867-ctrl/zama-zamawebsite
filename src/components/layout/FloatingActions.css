@@ -1,0 +1,111 @@
+﻿.zz-floating-actions {
+  position: fixed;
+  z-index: 900;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transform: translateY(-50%);
+}
+
+.zz-floating-action {
+  display: flex;
+  width: 54px;
+  min-height: 116px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 0;
+  background: #202226;
+  color: #f8f8f6;
+  text-decoration: none;
+  transition: width 220ms ease, background 220ms ease;
+}
+
+.zz-floating-action:hover {
+  width: 64px;
+  background: #e5232e;
+}
+
+.zz-floating-action__icon {
+  display: grid;
+  place-items: center;
+  color: #e5232e;
+  transition: color 180ms ease;
+}
+
+.zz-floating-action:hover .zz-floating-action__icon {
+  color: #fff;
+}
+
+.zz-floating-action__label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #f8f8f6;
+  font-family: var(--font-heading, Montserrat), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  white-space: nowrap;
+}
+
+.zz-floating-action--contact {
+  background: #e5232e;
+}
+
+.zz-floating-action--contact .zz-floating-action__icon {
+  color: #fff;
+}
+
+.zz-floating-action--contact:hover {
+  background: #c91925;
+}
+
+.zz-floating-action:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+@media (max-width: 600px) {
+  .zz-floating-actions {
+    top: auto;
+    right: 12px;
+    bottom: 18px;
+    flex-direction: row;
+    gap: 8px;
+    transform: none;
+  }
+
+  .zz-floating-action {
+    width: 54px;
+    min-height: 54px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 3px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+  }
+
+  .zz-floating-action:hover {
+    width: 54px;
+  }
+
+  .zz-floating-action__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zz-floating-action,
+  .zz-floating-action__icon {
+    transition: none;
+  }
+}

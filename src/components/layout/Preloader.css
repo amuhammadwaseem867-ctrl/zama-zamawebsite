@@ -244,3 +244,26 @@
     width: 100%;
   }
 }
+
+/* Stable preloader visibility and smoother entrance */
+.zz-preloader {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 700ms ease;
+}
+
+.zz-preloader--exit {
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.zz-preloader__wheel {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zz-preloader__wheel {
+    animation: none;
+  }
+}

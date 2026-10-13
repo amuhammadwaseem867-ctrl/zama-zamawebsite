@@ -2,6 +2,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Preloader from "@/components/layout/Preloader";
+import FloatingActions from "@/components/layout/FloatingActions";
 
 export const metadata = {
   title: "Zama Zama Auto Fitment Center | Tyres, Wheels & Vehicle Care",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
