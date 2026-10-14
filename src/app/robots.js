@@ -1,0 +1,12 @@
+﻿const baseUrl = "https://zamazama.site";
+
+export default function robots() {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/api/"],
+    },
+    sitemap: `${baseUrl}/sitemap.xml`,
+  };
+}
